@@ -3,9 +3,13 @@
   Create a function called helloWorld which simply console logs 'Hello, World!'
   Call the function.
 */
+let hi = "Hello, World";
+function helloWorld(input){
+  console.log(input);
+  return;
+}
 
-//CODE HERE
-
+//helloWorld(hi);         HERE
 
 ////////////////// PROBLEM 2 ////////////////////
 /*
@@ -13,8 +17,14 @@
   Ex. If 'Cameron' were passed in as the argument, Cameron would be console logged.
   Call the function, passing in an argument.
 */
+let name1 = "Cam'ron";
 
-//CODE HERE
+function printName(sumName){
+  console.log(sumName);
+}
+
+//printName(name1);         HERE
+
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -27,9 +37,14 @@
   Ex. If Jake were passed in as the argument, the function would log 'Hello, Jake'
   Make sure to call your function and pass in an argument.
 */
+let name = "mr bass";
+function greeting(name2){
 
-//CODE HERE
+  let nameStr = String(name2);
+  console.log("Hello", nameStr)
+}
 
+//greeting(name);         HERE
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -39,8 +54,17 @@
   Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
 */
 
-//CODE HERE
+function add(arg1, arg2){
 
+  let numb1 = parseInt(arg1);
+  let numb2 = parseInt(arg2);
+return (numb1 + numb2);
+}
+
+
+let sum = add(23, "23soso");
+
+//console.log(sum);   HERE
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -51,7 +75,19 @@
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
+function nameCheck(iGotaName){
+  let myName = String(iGotaName);         //Convert to lowercase? Or require specific input with first character in caps.
+  if(myName === "Steven"){      
+    return "What is up Steven?";
+  } else if (myName === 'Bryan'){
+    return "Hey Bryan!";
+  } else {
+    return `cool name ${iGotaName}`;
+
+  }
+}
+let nameGreeting = nameCheck("bryan");
+//console.log(nameGreeting);    HERE
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -64,19 +100,39 @@
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+function faveColorFinder(color){
+let userColor = String(color);
+if(userColor == "red"){
+return 'red is a great color'
+} else if (userColor == 'green'){
+  return 'green is a solid favorite color';
+} else if (userColor == 'black'){
+  return 'so trendy'
+} else {
+  return ' you need to evaluate your favorite color choice';
+}
+}
+
+let colorRating = faveColorFinder('Periwinkle');
+//console.log(colorRating);     HERE
+
 
 
 ////////////////// PROBLEM 7 ////////////////////
-let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
+let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
+function printAllNames(nameList){
+  for(let i = 0; i < nameList.length; i++){
+    console.log(nameList[i]);
+  }
+}
+//printAllNames(namesArr);        HERE FOR SURE
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -86,11 +142,24 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
+function thatsOdd(oddCheck){
+let num2Check = parseInt(oddCheck);
+
+  if(num2Check % 2 == 0){
+  return "That's not odd!";
+} else {
+  return 'That is odd indeed!';
+}
+}
+
+let oddChecker = thatsOdd(3);
+//console.log(oddChecker)       HERE
+
+
 
 
 ////////////////// PROBLEM 9 ////////////////////
-let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
+
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
   Inside of the bigOrSmall function, create a new array called 'answers'. 
@@ -99,8 +168,22 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. 
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
+let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 
-//CODE HERE
+function bigOrSmall(arr){
+  let answers = [];
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] > 100){
+      answers.push('big');
+    } else if (arr[i] <= 100){
+      answers.push('small')
+    }
+  }
+return answers;
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
+//console.log(arrayEvaluator);
 
 
 ////////////////// PROBLEM 10 ////////////////////
