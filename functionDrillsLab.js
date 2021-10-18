@@ -55,9 +55,9 @@ greeting(name);
 
 function add(arg1, arg2){
 
-  let numb1 = parseInt(arg1);
-  let numb2 = parseInt(arg2);
-return (numb1 + numb2);
+  arg1 = parseInt(arg1);
+  arg2 = parseInt(arg2);
+return (arg1 + arg2);
 }
 let sum = add(23, "23soso");
 
@@ -80,10 +80,9 @@ function nameCheck(iGotaName){
     return "Hey Bryan!";
   } else {
     return `cool name ${iGotaName}`;
-
   }
 }
-let nameGreeting = nameCheck("bryan");
+let nameGreeting = nameCheck("bathory");
 console.log(nameGreeting);   
 
 
@@ -106,7 +105,7 @@ return 'red is a great color'
 } else if (userColor == 'black'){
   return 'so trendy'
 } else {
-  return ' you need to evaluate your favorite color choice';
+  return 'you need to evaluate your favorite color choice';
 }
 }
 
