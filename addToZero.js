@@ -16,4 +16,9 @@ for(let i = 0; i < arr1.length; i++){
 }
 
 
-console.log(addsToZero);
+//console.log(addsToZero);
+
+let groceryList = "eggs, cheese, bacon, milk"
+
+let newList = groceryList.replaceAll(',', "")
+console.log(newList)
