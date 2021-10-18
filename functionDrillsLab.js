@@ -9,8 +9,7 @@ function helloWorld(input){
   return;
 }
 
-//helloWorld(hi);         HERE
-
+helloWorld(hi);         
 ////////////////// PROBLEM 2 ////////////////////
 /*
   Create a function called printName which takes in a person's name and console logs it.
@@ -23,7 +22,7 @@ function printName(sumName){
   console.log(sumName);
 }
 
-//printName(name1);         HERE
+printName(name1);     
 
 
 
@@ -41,10 +40,10 @@ let name = "mr bass";
 function greeting(name2){
 
   let nameStr = String(name2);
-  console.log("Hello", nameStr)
+  console.log(`hello ${name2}`)
 }
 
-//greeting(name);         HERE
+greeting(name);       
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -60,11 +59,9 @@ function add(arg1, arg2){
   let numb2 = parseInt(arg2);
 return (numb1 + numb2);
 }
-
-
 let sum = add(23, "23soso");
 
-//console.log(sum);   HERE
+console.log(sum); 
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -87,7 +84,7 @@ function nameCheck(iGotaName){
   }
 }
 let nameGreeting = nameCheck("bryan");
-//console.log(nameGreeting);    HERE
+console.log(nameGreeting);   
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -114,7 +111,7 @@ return 'red is a great color'
 }
 
 let colorRating = faveColorFinder('Periwinkle');
-//console.log(colorRating);     HERE
+console.log(colorRating);  
 
 
 
@@ -132,7 +129,7 @@ function printAllNames(nameList){
     console.log(nameList[i]);
   }
 }
-//printAllNames(namesArr);        HERE FOR SURE
+printAllNames(namesArr);        
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -153,7 +150,7 @@ let num2Check = parseInt(oddCheck);
 }
 
 let oddChecker = thatsOdd(3);
-//console.log(oddChecker)       HERE
+console.log(oddChecker)       
 
 
 ////////////////// PROBLEM 9 ////////////////////
@@ -180,7 +177,7 @@ return answers;
 }
 
 let arrayEvaluator = bigOrSmall(bigOrSmallArray);
-//console.log(arrayEvaluator);
+console.log(arrayEvaluator);
 
 
 ////////////////// PROBLEM 10 ////////////////////
@@ -202,7 +199,7 @@ for (i = 0; i < hungryGamers.length; i++){
   return hungryGamers;
 }
 theEliminator(contestants, loser);
-//console.log(contestants);
+console.log(contestants);
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -235,23 +232,17 @@ function upperCaseConv(someString){
 function emailCheck(email){
   email = String(email);
   email = email.trim();
-  verified = false;
  
-  for(let i = 0; i < email.length; i++){
-    if(email[i] == "@"){
-      verified = true;
-    } else;
-  }
-
-  if(verified){
-    return 'email verified';
-  } else {
-    return 'must provide a valid email address'
+  emailKey = "@";
+  if(email.includes(emailKey)){
+      return 'email verified';
+    } else {
+      return 'must provide a valid email address';
   }
 }
 
 let emailStatus = emailCheck('    bigdawg@devmtn.com')
-//console.log(emailStatus);
+console.log(emailStatus); 
 
 
 
@@ -266,18 +257,18 @@ function cashOut(money2Blow){
   return frogsBought;
 }
 let totalFrogs = cashOut(46);
-//console.log(totalFrogs)
+console.log(totalFrogs)
 ////////////////// PROBLEM 14 ////////////////////
 /*
   You might have noticed a slight bug in problem 12. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in problem 12 (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
 function cashOut2(money2Blow){
-  let frogsBought = Math.floor((money2Blow / 3));
-  //console.log(frogsBought);
+  let frogsBought2 = Math.floor((money2Blow / 3));
+  return frogsBought2;
 }
-let totalFrogs2 = cashOut(46);
-
+let totalFrogs2 = cashOut2(46);
+console.log(totalFrogs2);
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -285,7 +276,7 @@ let totalFrogs2 = cashOut(46);
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0,1,2,1,4,5,6,8,9]
 function ascensionOrNah(ladder){
   let jacob = true;
   for(let i = 0; i < ladder.length; i++){
@@ -294,12 +285,13 @@ function ascensionOrNah(ladder){
     } else;
   }
   if(jacob){
-    console.log("The array is ascending");
+    return true;
   } else {
-    console.log("not ascending")
+    return false;
   };
 }
-ascensionOrNah(sampleArray);
+let arrayIsAscending = ascensionOrNah(sampleArray);
+console.log(arrayIsAscending);
 
 ////////////////// PROBLEM 16 ////////////////////
 
