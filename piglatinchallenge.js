@@ -26,8 +26,8 @@ const pigLatinConverter = (str) => {
 
 
 pigLatinConverter(englishStr);
-
-
+//
+//const isPalindrome = (word) => [...word.replace(/[^a-zA-Z]/g, "")].reverse().join("") === word.replace(/[^a-zA-Z]/g, "");
 
 
 
