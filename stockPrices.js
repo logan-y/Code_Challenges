@@ -38,5 +38,5 @@ const best = (arr) => {
     
 
 
- console.log(best([3, 4, 7, 8, 2, 9, 3, 5, 1]));
+ console.log(best([600, 4, 7, 8, 5, 10, 3, 50, 1]));
 
