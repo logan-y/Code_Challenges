@@ -33,3 +33,4 @@ let mealCount = (input) => {
 return foodList;
 }
 console.log(mealCount(list1))
+
