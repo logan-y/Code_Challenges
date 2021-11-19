@@ -7,3 +7,4 @@ function MaskCharacter(str) {
 var strang = "29092082"
 // Call function without giving value of n
 console.log(MaskCharacter(strang));
+////test
